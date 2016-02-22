@@ -1,0 +1,20 @@
+#
+# generated on 2016/02/22 02:06:12
+#
+# --table-start--
+dataClass=com.example.lus.myapplication.model.Team
+tableName=team
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=nome
+# --field-end--
+# --field-start--
+fieldName=sigla
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

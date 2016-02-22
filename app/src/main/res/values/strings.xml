@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">My Soccer</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_amistoso">Cadastrar Equipes</string>
+
+    <!--validações-->
+
+    <string name="validar_nome">Obrigatório nome.</string>
+    <string name="validar_senha">Obrigatório sigla.</string>
+
+
+    <!--Mensagens-->
+
+    <string name="cadastro_sucs">Cadastro feito com sucesso.</string>
+    <string name="atualizar">Registro atualizado com sucesso.</string>
+    <string name="error_cad">Erro ao cadastrar.</string>
+    <string name="title_activity_list_equipes">Listar Equipes</string>
+
+</resources>
