@@ -1,6 +1,7 @@
 package com.example.lus.myapplication;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -9,9 +10,13 @@ import android.widget.EditText;
 import com.example.lus.myapplication.model.Team;
 import com.example.lus.myapplication.util.Mensagem;
 
+import org.w3c.dom.Comment;
+
+import java.sql.SQLException;
+
 public class Crud_Equipe extends BaseActivity {
 
-    private EditText edtNome , edtSigla;
+    private EditText edtNome , edtSigla ;
 
 
     @Override
@@ -28,6 +33,7 @@ public class Crud_Equipe extends BaseActivity {
         edtSigla = (EditText) findViewById(R.id.editText2);
 
 
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
@@ -38,12 +44,12 @@ public class Crud_Equipe extends BaseActivity {
         String sigla = edtSigla.getText().toString();
 
         boolean  validacao = true;
-        if(nome == null || nome.equals("")){
+        if(nome.equals("")){
             validacao = false;
             edtNome.setError(getString(R.string.validar_nome));
 
         }
-        if(sigla == null || sigla.equals("")){
+        if(sigla.equals("")){
             validacao = false;
             edtSigla.setError(getString(R.string.validar_senha));
         }
@@ -66,6 +72,8 @@ public class Crud_Equipe extends BaseActivity {
             }
         }
     }
+
+
 
 
 }

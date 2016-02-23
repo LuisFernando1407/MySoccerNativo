@@ -13,6 +13,8 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         //Pegando o id dos buttons
         Button btn1 = (Button)findViewById(R.id.btn2);
         Button btn2 = (Button)findViewById(R.id.btn1);
@@ -21,7 +23,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 //chamando a outra tela
-                Intent intent = new Intent(getContext(),Crud_Equipe.class);
+                Intent intent = new Intent(getContext(), Crud_Equipe.class);
                 startActivity(intent);
             }
         });
@@ -30,6 +32,7 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
                 start(v.getContext());
             }
+
             public void start(Context context) {
                 Intent starter = new Intent(context, ListEquipes.class);
                 context.startActivity(starter);
@@ -40,9 +43,8 @@ public class MainActivity extends BaseActivity {
 
 
 
+    }
 
-
-}
     private Context getContext(){
 
         return this;
