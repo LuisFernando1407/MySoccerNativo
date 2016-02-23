@@ -26,6 +26,7 @@ public class MainActivity extends BaseActivity {
                 Intent intent = new Intent(getContext(), Crud_Equipe.class);
                 startActivity(intent);
             }
+
         });
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +41,6 @@ public class MainActivity extends BaseActivity {
 
 
         });
-
 
 
     }
