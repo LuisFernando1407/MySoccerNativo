@@ -17,9 +17,9 @@ public class MainActivity extends BaseActivity {
 
         //Pegando o id dos buttons
         Button btn1 = (Button)findViewById(R.id.btn2);
-        Button btn2 = (Button)findViewById(R.id.btn1);
+       // Button btn2 = (Button)findViewById(R.id.btn1);
         //Açaõ do click
-        btn1.setOnClickListener(new View.OnClickListener() {
+        /*btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //chamando a outra tela
@@ -27,8 +27,8 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
 
-        });
-        btn2.setOnClickListener(new View.OnClickListener() {
+        });*/
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 start(v.getContext());

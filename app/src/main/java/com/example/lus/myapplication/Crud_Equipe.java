@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.lus.myapplication.model.Team;
@@ -17,7 +18,7 @@ import java.sql.SQLException;
 public class Crud_Equipe extends BaseActivity {
 
     private EditText edtNome , edtSigla ;
-
+    private Button acaoB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,8 @@ public class Crud_Equipe extends BaseActivity {
         //this->contexto
         edtNome = (EditText) findViewById(R.id.editText);
         edtSigla = (EditText) findViewById(R.id.editText2);
+
+
 
 
 
@@ -64,14 +67,15 @@ public class Crud_Equipe extends BaseActivity {
                 dbHelper.getTimeDao().create(team);
 
                 Mensagem.Msg(this, getString(R.string.cadastro_sucs));
+                startActivity(new Intent(this, ListEquipes.class));
                 finish();
-                startActivity(new Intent(this, MainActivity.class));
             } catch(Exception e) {
 
                 Mensagem.Msg(this, getString(R.string.error_cad));
             }
         }
     }
+
 
 
 

@@ -7,11 +7,14 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.sql.SQLException;
@@ -20,6 +23,7 @@ import java.util.List;
 import com.daimajia.swipe.SwipeLayout;
 import com.daimajia.swipe.util.Attributes;
 import com.example.lus.myapplication.adplist.eqpAdp;
+import com.example.lus.myapplication.fontawesome.DrawableAwesome;
 import com.example.lus.myapplication.model.Team;
 
 public class ListEquipes extends BaseActivity {
@@ -45,7 +49,44 @@ public class ListEquipes extends BaseActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        TextView toolbarTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
+        toolbarTitle.setText(R.string.title_activity_list_equipes);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        // getting icon
+        DrawableAwesome.DrawableAwesomeBuilder faBuilder = new DrawableAwesome.DrawableAwesomeBuilder(this, R.string.fa_plus);
+        faBuilder.setColor(Color.WHITE);
+        faBuilder.setSize(26);
+        faBuilder.setFakeBold(false);
+        DrawableAwesome fa = faBuilder.build();
+
+        MenuItem add = menu.findItem(R.id.action_add);
+
+        // setting icon
+        add.setIcon(fa);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        //
+        switch (id) {
+            case R.id.action_add:
+                startActivity(new Intent(this, Crud_Equipe.class));
+                return true;
+
+            case android.R.id.home:
+                finish();
+                return false;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 }
