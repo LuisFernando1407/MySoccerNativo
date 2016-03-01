@@ -26,6 +26,7 @@ public class Crud_Equipe extends BaseActivity {
     private EditText edtNome , edtSigla ;
     private Button acaoB;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -74,7 +75,7 @@ public class Crud_Equipe extends BaseActivity {
 
         String nome = edtNome.getText().toString();
         String sigla = edtSigla.getText().toString();
-
+        sigla = sigla.toUpperCase();
         boolean  validacao = true;
         if(nome.equals("")){
             validacao = false;

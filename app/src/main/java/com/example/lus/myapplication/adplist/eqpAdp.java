@@ -1,7 +1,10 @@
 package com.example.lus.myapplication.adplist;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,12 +68,8 @@ public class eqpAdp extends BaseAdapter {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    dbHelper.getTimeDao().deleteById(equipe.getId());
-                    lista.remove(position);
-                    notifyDataSetChanged();
-                } catch (SQLException ignored) {
-                }
+                confirmDialog(context,position,equipe);
+
             }
         });
 
@@ -78,5 +77,41 @@ public class eqpAdp extends BaseAdapter {
 
 
         return view;
+    }
+
+    private void confirmDialog(Context context , final int position , final Team equipe){
+
+        final AlertDialog alert = new AlertDialog.Builder(
+                new ContextThemeWrapper(context,android.R.style.Theme_Dialog))
+                .create();
+        alert.setTitle("Atenção!!!");
+        alert.setMessage("Deseja realmente apagar " + equipe.getNome() + " ?");
+        alert.setCancelable(false);
+        alert.setCanceledOnTouchOutside(false);
+
+        alert.setButton(DialogInterface.BUTTON_POSITIVE, "Sim",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        try {
+                            dbHelper.getTimeDao().deleteById(equipe.getId());
+                            lista.remove(position);
+                            notifyDataSetChanged();
+                        } catch (SQLException ignored) {
+                        }
+                        alert.dismiss();
+
+                    }
+                });
+
+        alert.setButton(DialogInterface.BUTTON_NEGATIVE, "Não",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        alert.dismiss();
+
+                    }
+                });
+
+        alert.show();
     }
 }
