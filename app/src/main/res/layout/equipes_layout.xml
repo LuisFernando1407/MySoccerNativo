@@ -22,13 +22,13 @@
             android:text="Medium Text"
             android:layout_gravity="left|center_vertical"
             android:id="@+id/equipe_lista" />
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="41dp"
-            android:layout_height="42dp"
+        <com.example.lus.myapplication.fontawesome.TextAwesome
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/trash"
             android:layout_gravity="right"
-            android:background="@drawable/trash" />
+            android:textSize="22sp"
+            android:text="@string/fa_trash"/>
 
     </FrameLayout>
 

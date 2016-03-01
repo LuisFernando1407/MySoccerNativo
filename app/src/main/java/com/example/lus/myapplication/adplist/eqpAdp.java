@@ -61,7 +61,7 @@ public class eqpAdp extends BaseAdapter {
         }
 
         TextView txtnome = (TextView) view.findViewById(R.id.equipe_lista);
-        Button button = (Button) view.findViewById(R.id.trash);
+        TextView button = (TextView) view.findViewById(R.id.trash);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

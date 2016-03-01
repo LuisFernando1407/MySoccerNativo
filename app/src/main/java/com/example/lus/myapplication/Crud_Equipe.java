@@ -2,12 +2,18 @@ package com.example.lus.myapplication;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
+import com.example.lus.myapplication.fontawesome.DrawableAwesome;
 import com.example.lus.myapplication.model.Team;
 import com.example.lus.myapplication.util.Mensagem;
 
@@ -39,7 +45,30 @@ public class Crud_Equipe extends BaseActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        TextView toolbarTitle = (TextView) toolbar.findViewById(R.id.toolbar_title_crud);
+        toolbarTitle.setText(R.string.title_activity_crud_equipes);
+
     }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        //
+        switch (id) {
+            /*case R.id.action_add:
+                startActivity(new Intent(this, Crud_Equipe.class));
+                return true;
+            */
+            case android.R.id.home:
+                startActivity(new Intent(this, ListEquipes.class));
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
     public void cadastrar(View view){
 
