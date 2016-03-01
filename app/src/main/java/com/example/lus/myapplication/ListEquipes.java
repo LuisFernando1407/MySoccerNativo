@@ -83,8 +83,8 @@ public class ListEquipes extends BaseActivity {
                 return true;
 
             case android.R.id.home:
-                finish();
-                return false;
+                startActivity(new Intent(this,MainActivity.class));
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
