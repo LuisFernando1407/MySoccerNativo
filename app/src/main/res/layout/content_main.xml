@@ -30,6 +30,7 @@
         android:text="Amistoso"
         android:id="@+id/textView"
         android:textColor="#ffffff"
+        android:paddingRight="15dp"
         android:layout_below="@+id/btn2"
         android:layout_alignRight="@+id/btn2"
         android:layout_alignEnd="@+id/btn1" />
@@ -41,7 +42,7 @@
         android:text="Equipes"
         android:id="@+id/textView2"
         android:textColor="#ffffff"
-        android:paddingLeft="15dp"
+        android:paddingLeft="22dp"
         android:layout_alignTop="@+id/textView"
         android:layout_alignLeft="@+id/btn2"
         android:layout_alignStart="@+id/btn2" />
