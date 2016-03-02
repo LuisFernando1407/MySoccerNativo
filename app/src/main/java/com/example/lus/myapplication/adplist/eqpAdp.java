@@ -81,8 +81,7 @@ public class eqpAdp extends BaseAdapter {
 
     private void confirmDialog(Context context , final int position , final Team equipe){
 
-        final AlertDialog alert = new AlertDialog.Builder(
-                new ContextThemeWrapper(context,android.R.style.Theme_Dialog))
+        final AlertDialog alert = new AlertDialog.Builder(context)
                 .create();
         alert.setTitle("Atenção!!!");
         alert.setMessage("Deseja realmente apagar " + equipe.getNome() + " ?");
