@@ -76,6 +76,7 @@ public class eqpAdp extends BaseAdapter {
         txtnome.setText(equipe.getNome());
 
 
+
         return view;
     }
 

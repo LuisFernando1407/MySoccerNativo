@@ -38,6 +38,7 @@
         <activity
             android:name=".Amistoso_select"
             android:label="@string/title_activity_amistoso_select"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme"></activity>
     </application>
 
