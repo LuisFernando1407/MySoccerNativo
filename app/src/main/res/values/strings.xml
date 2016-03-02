@@ -16,5 +16,6 @@
     <string name="error_cad">Erro ao cadastrar.</string>
     <string name="title_activity_list_equipes">Listar equipes</string>
     <string name="title_activity_crud_equipes">Cadastrar equipe</string>
+    <string name="title_activity_amistoso_select">Amistoso</string>
 
 </resources>

@@ -11,8 +11,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,9 +23,9 @@
             android:name=".Crud_Equipe"
             android:label="@string/title_activity_amistoso"
             android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.lus.myapplication.MainActivity" />
@@ -33,10 +33,12 @@
         <activity
             android:name=".ListEquipes"
             android:label="@string/title_activity_list_equipes"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Amistoso_select"
+            android:label="@string/title_activity_amistoso_select"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

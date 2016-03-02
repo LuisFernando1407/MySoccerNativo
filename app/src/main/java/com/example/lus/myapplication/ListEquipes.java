@@ -49,6 +49,13 @@ public class ListEquipes extends BaseActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        DrawableAwesome.DrawableAwesomeBuilder faBuilder = new DrawableAwesome.DrawableAwesomeBuilder(this, R.string.fa_chevron_left);
+        faBuilder.setColor(Color.WHITE);
+        faBuilder.setSize(26);
+        faBuilder.setFakeBold(false);
+        DrawableAwesome fad = faBuilder.build();
+        getSupportActionBar().setHomeAsUpIndicator(fad);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         TextView toolbarTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
         toolbarTitle.setText(R.string.title_activity_list_equipes);

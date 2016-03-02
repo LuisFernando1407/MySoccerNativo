@@ -47,6 +47,13 @@ public class Crud_Equipe extends BaseActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        DrawableAwesome.DrawableAwesomeBuilder faBuilder = new DrawableAwesome.DrawableAwesomeBuilder(this, R.string.fa_chevron_left);
+        faBuilder.setColor(Color.WHITE);
+        faBuilder.setSize(26);
+        faBuilder.setFakeBold(false);
+        DrawableAwesome fadh = faBuilder.build();
+        getSupportActionBar().setHomeAsUpIndicator(fadh);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         TextView toolbarTitle = (TextView) toolbar.findViewById(R.id.toolbar_title_crud);
         toolbarTitle.setText(R.string.title_activity_crud_equipes);
