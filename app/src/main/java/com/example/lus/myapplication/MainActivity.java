@@ -24,6 +24,7 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
                 //chamando a outra tela
                 Intent intent = new Intent(getContext(), Amistoso_select.class);
+                intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
 

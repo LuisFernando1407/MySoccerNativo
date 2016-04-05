@@ -10,6 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Amistoso_select"
+    android:background="@drawable/fundo"
     tools:showIn="@layout/activity_amistoso_select">
 
     <ListView

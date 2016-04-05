@@ -26,7 +26,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class Amistoso_select extends BaseActivity {
-    ;
+
     private ListView listaM;
     private List<Team> listaMS;
     private AdpListAm adpM;
@@ -63,6 +63,7 @@ public class Amistoso_select extends BaseActivity {
 
         TextView toolbarTitle = (TextView) toolbar.findViewById(R.id.toolbar_title_amistoso);
         toolbarTitle.setText(R.string.title_activity_amistoso_select);
+        toolbarTitle.setTextSize(20);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -18,4 +18,14 @@
     <string name="title_activity_crud_equipes">Cadastrar equipe</string>
     <string name="title_activity_amistoso_select">Amistoso</string>
 
+
+    <!--Tela home-->
+    <string name="text_amistoso">Amistoso</string>
+    <string name="text_equipes">Equipes</string>
+
+    <!--Tela Crud Equipe-->
+    <string name="text_nome_da_equipe">Nome da Equipe:</string>
+    <string name="text_sigla_da_equipe">Sigla da Equipe: </string>
+    <string name="hint_label_nome_equipe">Ex: Time, Barcelona</string>
+    <string name="hint_label_sigla_equipe">Ex: T1, FCB</string>
 </resources>

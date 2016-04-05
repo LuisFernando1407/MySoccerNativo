@@ -1,79 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Crud_Equipe"
+    android:background="@drawable/fundo"
     tools:showIn="@layout/activity_crudequipe">
 
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/equipes"
+        android:layout_gravity="center"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Nome da equipe:"
+        android:textColor="#ffffff"
+        android:text="@string/text_nome_da_equipe"
+        android:layout_marginBottom="10dp"
         android:id="@+id/nome_Tx"
-        android:layout_marginTop="47dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="20dp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
+        android:background="#ffffff"
+        android:padding="10dp"
+        android:hint="@string/hint_label_nome_equipe"
+        android:textColorHint="#e7706d6d"
         android:singleLine="true"
-        android:layout_below="@+id/nome_Tx"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:inputType="textCapSentences"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Sigla da equipe:"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="10dp"
+        android:text="@string/text_sigla_da_equipe"
         android:id="@+id/sigla_TX"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="51dp" />
+        android:layout_marginTop="30dp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText2"
+        android:hint="@string/hint_label_sigla_equipe"
+        android:background="#ffffff"
+        android:padding="10dp"
+        android:textColorHint="#e7706d6d"
         android:singleLine="true"
-        android:maxLength="3"
-        android:layout_below="@+id/sigla_TX"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/editText"
-        android:layout_alignEnd="@+id/editText"
-        />
+        android:maxLength="3" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Adicionar Equipe"
         android:id="@+id/button"
-        android:layout_below="@+id/editText2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="72dp"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2"
-        android:onClick="cadastrar"/>
+        android:layout_marginTop="40dp"
+        android:onClick="cadastrar"
+        android:theme="@style/PrimaryButton"/>
 
-
-
-
-</RelativeLayout>
+</LinearLayout>

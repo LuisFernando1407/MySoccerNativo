@@ -57,6 +57,7 @@ public class Crud_Equipe extends BaseActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         TextView toolbarTitle = (TextView) toolbar.findViewById(R.id.toolbar_title_crud);
         toolbarTitle.setText(R.string.title_activity_crud_equipes);
+        toolbarTitle.setTextSize(20);
 
     }
 

@@ -59,6 +59,7 @@ public class ListEquipes extends BaseActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         TextView toolbarTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
         toolbarTitle.setText(R.string.title_activity_list_equipes);
+        toolbarTitle.setTextSize(20);
     }
 
     @Override
